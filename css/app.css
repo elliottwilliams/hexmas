@@ -1,0 +1,22 @@
+/* app css stylesheet */
+.container {
+
+    font: 300 1em 'Raleway', sans-serif;
+}
+
+h1 {
+    font: inherit;
+    font-size: 8.7em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.days {
+    font-size: 2.3em;
+}
+
+.boring-clarification {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1em;
+}
