@@ -1,6 +1,5 @@
 /* app css stylesheet */
-.container {
-
+body {
     font: 300 1em 'Raleway', sans-serif;
 }
 
@@ -10,7 +9,9 @@ h1 {
     text-align: center;
     margin-top: 1em;
 }
-.boring-clarification {
+.boring-stuff {
+    max-width: 350px;
+    margin: 0 auto;
     text-align: center;
     font-weight: 400;
     font-size: 1em;
