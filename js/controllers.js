@@ -9,7 +9,8 @@ angular.module('hexmas', []).
     x = new Date(Date.now());
     // obviously christmas occurs in month 11
     m = new Date(x.getFullYear(), 11, 25);
-    $scope.isItChristmas = (x.getMonth() === 11 && x.getDay() === 25);
+    console.log(x.getMonth(), x.getDate())
+    $scope.isItChristmas = (x.getMonth() === 11 && x.getDate() === 25);
 
     if (x > m) {
         m.setFullYear(x.getFullYear() + 1);
@@ -22,7 +23,4 @@ angular.module('hexmas', []).
 
     $scope.hexDays = s.toString(16);
     $scope.decDays = s.toString(10);
-  })
-  .controller('Dec', function DecmasCtrl($scope) {
-    $scope.date = "bazqux";
   });

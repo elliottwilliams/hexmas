@@ -23,12 +23,16 @@
   </script>
 
 </head>
-<body>
+<body class="ng-cloak" ng-controller="Hex">
 
-  <div class="ng-cloak" ng-controller="Hex" ng-switch on="isItChristmas">
+  <div ng-switch="isItChristmas">
+    <h1 ng-switch-when="true">merry christmas</h1>
+    <h1 ng-switch-when="false">0x{{hexDays}}</h1>
+  </div>
+
+  <section class="boring-stuff" ng-switch="isItChristmas">
     <div ng-switch-when="true">
-      <h1>merry christmas</h1>
-      <p>time for christmas jams:</p>
+      <p>cue xmas jams:</p>
       <p>
         <iframe style="border: 0; width: 350px; height: 350px;" src="http://bandcamp.com/EmbeddedPlayer/album=3633758808/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless>
           <a href="http://rushcoil.bandcamp.com/album/8-bit-christmas">8-bit Christmas by Rush Coil</a>
@@ -36,20 +40,19 @@
       </p>
     </div>
 
-    <h1 ng-switch-when="false">0x{{hexDays}}</h1>
-  </div>
+    <div ng-switch-when="false">
+      <p><!-- The True Meaning Of Christmas -->
+        <img src="img/claus.png" alt="Santa courtesy http://www.retrospiritgames.co.uk">
+      </p>
+      <p><!-- Shameless Plug -->
+        by <a href="https://twitter.com/elliottwil" target="_blank">@elliottwil</a>
+      </p>
+      <p><!-- Shameful Plug -->
+        <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fhexdaysuntilchristmas.com&text=I%20loved%20learning%20the%20number%20of%20days%20until%20christmas%20in%20hex%20at"
+          target="_blank">
+          tell yo frands</a> </p>
 
-  <section class="boring-stuff ng-cloak">
-    <p><!-- The True Meaning Of Christmas -->
-      <img src="img/claus.png" alt="Santa courtesy http://www.retrospiritgames.co.uk">
-    </p>
-    <p><!-- Shameless Plug -->
-      by <a href="https://twitter.com/elliottwil" target="_blank">@elliottwil</a>
-    </p>
-    <p><!-- Shameful Plug -->
-      <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fhexdaysuntilchristmas.com&text=I%20loved%20learning%20the%20number%20of%20days%20until%20christmas%20in%20hex%20at"
-        target="_blank">
-        tell yo frands</a> </p>
+    </div>
   </section>
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
