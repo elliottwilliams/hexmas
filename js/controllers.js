@@ -18,7 +18,7 @@ angular.module('hexmas', []).
 
     a = 24 * 60 * 60 * 1000;
     s = (m.getTime() - x.getTime()) / a;
-    s = Math.floor(s);
+    s = Math.ceil(s);
     // ^^ xmASS o.o
 
     $scope.hexDays = s.toString(16);
